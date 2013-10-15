@@ -80,7 +80,7 @@
                                                       return this.nodeType === 3;
                                                   }).first().remove();
                                                   // replace every relative link in navigation
-                                                  $(this).find('a').not('[href^="http"],[src^="https"],[src^="/"],[src^="mailto"]').each(function(){
+                                                  $(this).find('a').not('[href^="http"],[src^="https"],[src^="/"],[src^="mailto"],[src^="#"]').each(function(){
                                                     var newLink = getDirectory(nav) + $(this).attr('href');
                                                     $(this).attr('href', newLink);
                                                   });
