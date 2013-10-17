@@ -37,7 +37,7 @@ function loadScript(url, callback) {
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-function startFunction(){
+function startEpubViewer(){
   // load jquery references manually (better host them our self!)
   loadScript("http://code.jquery.com/jquery-1.10.2.min.js", function() {
 
@@ -133,3 +133,6 @@ function startFunction(){
   });
 });
 }
+
+// start EPUB viewer
+startEpubViewer();
