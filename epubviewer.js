@@ -16,6 +16,13 @@ function getDirectory(url)
 }
 
 $(document).ready(function(){
+
+    // clear complete webpage. Build webpage with jQuery
+    $('body').empty();
+    $('body').append('<h1>Contents of EPUB</h1>');
+    $('body').append('<div id="books"></div>');
+    $('body').append('<div id="content"></div>');
+
     // Parse EPUB:
     // Parse container.xml
     $.ajax({
