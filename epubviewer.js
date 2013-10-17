@@ -58,6 +58,14 @@ function startFunction(){
       $('body').append('<div id="books"></div>');
       $('body').append('<div id="content"></div>');
 
+      // load CSS dynamically
+      if (document.createStyleSheet){ // IE
+          document.createStyleSheet('epubviewer.css');
+      }
+      else {
+          $("head").append($("<link rel='stylesheet' href='epubviewer.css' type='text/css' media='screen' />"));
+      }
+
       // Parse EPUB:
       // Parse container.xml
       $.ajax({
