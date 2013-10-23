@@ -58,12 +58,12 @@ function startEpubViewer(){
       $('body').append('<div id="books"></div>');
       $('body').append('<div id="content"></div>');
 
-      // load CSS dynamically
+      // load CSS dynamically. WARNING: Using fixed link!
       if (document.createStyleSheet){ // IE
-          document.createStyleSheet('epubviewer.css');
+          document.createStyleSheet('http://oerpub.github.io/epub-viewer/epubviewer.css');
       }
       else {
-          $("head").append($("<link rel='stylesheet' href='epubviewer.css' type='text/css' media='screen' />"));
+          $("head").append($("<link rel='stylesheet' href='http://oerpub.github.io/epub-viewer/epubviewer.css' type='text/css' media='screen' />"));
       }
 
       // Parse EPUB:
