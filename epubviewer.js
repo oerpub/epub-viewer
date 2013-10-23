@@ -52,7 +52,7 @@ function startEpubViewer(){
       else {
         $('head').prepend('<title></title>');
       }
-      $('title').text('Content of EPUB');
+      $('title').text('Contents of EPUB');
       $('body').empty();
       $('body').append('<h1>Contents of EPUB</h1>');
       $('body').append('<div id="books"></div>');
